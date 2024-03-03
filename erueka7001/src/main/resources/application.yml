@@ -2,14 +2,52 @@ server:
   port: 7001
 spring:
   application:
-    # 指定注册到eureka server上的服务名称,对于电影微服务，此处名称设为microservice-consumer-movie
+    # 指定注册到eureka server上的服务名称
     name: client-7001
+
 eureka:
   client:
     service-url:
       # 指定eureka server通信地址，注意/eureka/小尾巴不能少，要注册多个时用逗号隔开
-      defaultZone: http://localhost:6001/eureka/
+      defaultZone: http://localhost:6001/eureka/,http://localhost:6002/eureka/
   instance:
     # 是否注册IP到eureka server，如不指定或设为false，那就会注册主机名到eureka server
     prefer-ip-address: true
     instance-id: client:7001
+
+# Ribbon 负载均衡配置
+eureke-server:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+# 把Ribbon懒加载模式改为饥饿加载
+ribbon:
+  eager-load:
+    enabled: true
+    # 多个用,分隔
+    clients: client-7001
+
+# 开启hystrix
+feign:
+  # springcloud版本2020之后用这个
+  circuitbreaker:
+    enabled: true
+# springcloud版本2020以前用这个
+  hystrix:
+    enabled: true
+
+#  client:
+#    config:
+##      #配置服务名为provider的相关信息
+##      provider:
+##        #打印的日志级别
+##        loggerLevel: FULL
+##        #指的是建立连接所用的时间
+##        connectTimeout: 2000
+##        #指的是建立连接后从服务器读取到可用资源所用的时间
+##        readTimeout: 5000
+#      #default代表所有服务
+#      default:
+#        #feign客户端建立连接超时时间
+#        connectTimeout: 2000
+#        #feign客户端建立连接后读取资源超时时间
+#        readTimeout: 3000

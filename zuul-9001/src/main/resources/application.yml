@@ -1,0 +1,20 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: gateway-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6001/eureka/
+
+# 路由配置
+zuul:
+  # 路由地址前缀
+  prefix: /api
+  # 忽略路由的微服务
+  ignored-services: '*'
+  # 自定义微服务访问路径
+  routes:
+    eureke-server: /server/**
+

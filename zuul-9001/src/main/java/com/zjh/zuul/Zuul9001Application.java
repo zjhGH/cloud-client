@@ -1,17 +1,17 @@
-package com.zjh.erueka;
+package com.zjh.zuul;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @EnableEurekaClient
-@EnableFeignClients
+@EnableZuulProxy
 @SpringBootApplication
-public class Erueka7001Application {
+public class Zuul9001Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Erueka7001Application.class, args);
+        SpringApplication.run(Zuul9001Application.class, args);
     }
 
 }

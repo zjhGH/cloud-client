@@ -1,17 +1,17 @@
-package com.zjh.erueka;
+package com.zjh.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableEurekaClient
-@EnableFeignClients
+@EnableConfigServer
 @SpringBootApplication
-public class Erueka7001Application {
+public class SpringcloudConfigApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Erueka7001Application.class, args);
+        SpringApplication.run(SpringcloudConfigApplication.class, args);
     }
 
 }

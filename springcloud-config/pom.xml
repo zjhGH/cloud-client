@@ -7,10 +7,10 @@
         <artifactId>cloud-client</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.zjh.erueka</groupId>
-    <artifactId>erueka7001</artifactId>
+    <groupId>com.zjh.config</groupId>
+    <artifactId>springcloud-config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>erueka7001</name>
+    <name>springcloud-config</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -20,14 +20,9 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -40,18 +35,10 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-        <!-- feign 调用接口 -->
-        <!-- feign中整合了hystrix 容错方案（熔断器、资源隔离、监控、回退机制） -->
+        <!-- springcloud config 配置中心 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-
-        <!-- knife4j -->
-        <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-            <artifactId>knife4j-spring-boot-starter</artifactId>
-            <version>2.0.4</version>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
     </dependencies>
 

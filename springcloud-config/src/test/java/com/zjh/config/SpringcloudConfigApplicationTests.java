@@ -1,10 +1,10 @@
-package com.zjh.cloud;
+package com.zjh.config;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CloudClientApplicationTests {
+class SpringcloudConfigApplicationTests {
 
     @Test
     void contextLoads() {
