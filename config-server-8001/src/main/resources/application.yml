@@ -2,7 +2,7 @@ server:
   port: 8001
 spring:
   application:
-    name: springcloud-config-server
+    name: config-server-8001
   cloud:
     config:
       server:

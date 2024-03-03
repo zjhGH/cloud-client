@@ -8,9 +8,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.zjh.config</groupId>
-    <artifactId>springcloud-config</artifactId>
+    <artifactId>config-server-8001</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springcloud-config</name>
+    <name>config-server-8001</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

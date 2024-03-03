@@ -18,7 +18,7 @@
     <modules>
         <module>erueka7001</module>
         <module>zuul-9001</module>
-        <module>springcloud-config</module>
+        <module>config-server-8001</module>
     </modules>
 
     <properties>
