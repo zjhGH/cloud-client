@@ -8,9 +8,9 @@ spring:
       server:
         git:
           # Git仓库地址
-          uri: https://github.com/zjhGH/cloud-client.git
+          uri: https://github.com/zjhGH/cloud-client/config-server-8001.git
           # 远程仓库的文件夹地址
-          search-paths: springcloud-config
+          search-paths: config
           # 默认分支
           default-label: master
 
