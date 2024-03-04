@@ -8,17 +8,13 @@ spring:
       server:
         git:
           # Git仓库地址
-          uri: https://github.com/zjhGH/cloud-client/config-server-8001.git
+          uri: https://github.com/zjhGH/cloud-client.git
           # 远程仓库的文件夹地址
-          search-paths: config
+          search-paths: /config-server-8001/config
           # 默认分支
           default-label: master
 
 eureka:
   client:
-    # 是否要注册到其他Eureka Server实例
-    register-with-eureka: false
-    # 是否要从其他Eureka Server实例获取数据
-    fetch-registry: false
     service-url:
       defaultZone: http://localhost:6001/eureka/

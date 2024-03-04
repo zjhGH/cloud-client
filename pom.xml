@@ -19,6 +19,7 @@
         <module>erueka7001</module>
         <module>zuul-9001</module>
         <module>config-server-8001</module>
+        <module>config-client-8010</module>
     </modules>
 
     <properties>

@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      # 对应配置服务地址
+      uri: http://localhost:8001/
+      # 指定拉取配置文件名称
+      name: test
+      # 指定拉取配置文件环境
+      profile: dev
+      # 指定从仓库那个分支拉取
+      label: master
