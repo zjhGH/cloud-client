@@ -1,6 +1,8 @@
 server:
   port: 7777
-  prod: prod
+spring:
+  application:
+    name: prod-7777
 eureka:
   client:
     # 是否要注册到其他Eureka Server实例
